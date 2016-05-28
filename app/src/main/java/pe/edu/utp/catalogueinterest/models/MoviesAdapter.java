@@ -59,9 +59,9 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
                 System.out.printf("Selected position: %d%n", position);
                 Intent itemIntent = new Intent(view.getContext(), MovieDetailActivity.class);
                 Bundle bundle = new Bundle();
-                bundle.putString("firstName", movies.get(position).movieName);
-                bundle.putString("pictureUrl", movies.get(position).imageUrl);
-                bundle.putString("shortBio", movies.get(position).Synopsis);
+                bundle.putString("movieName", movies.get(position).movieName);
+                bundle.putString("imageUrl", movies.get(position).imageUrl);
+                bundle.putString("synopsis", movies.get(position).synopsis);
                 itemIntent.putExtras(bundle);
                 view.getContext().startActivity(itemIntent);
             }

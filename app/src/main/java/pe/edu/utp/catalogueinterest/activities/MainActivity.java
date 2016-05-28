@@ -15,13 +15,13 @@ import pe.edu.utp.catalogueinterest.R;
  */
 
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
-    Button peopleButton;
+    Button moviesButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        peopleButton = (Button) findViewById(R.id.peopleButton);
-        peopleButton.setOnClickListener(this);
+        moviesButton = (Button) findViewById(R.id.moviesButton);
+        moviesButton.setOnClickListener(this);
     }
 
     @Override
@@ -48,7 +48,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        if(v.getId() == R.id.peopleButton) {
+        if(v.getId() == R.id.moviesButton) {
             this.startActivity(new Intent(MainActivity.this, MoviesCatalogActivity.class));
 
         }

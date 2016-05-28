@@ -14,7 +14,7 @@ import pe.edu.utp.catalogueinterest.R;
 import pe.edu.utp.catalogueinterest.models.MoviesAdapter;
 
 /**
- * Created by Usuario on 27/05/2016.
+ * Created by rojasleón on 24/05/2016.
  */
 
 public class MoviesCatalogActivity extends AppCompatActivity {
@@ -67,6 +67,11 @@ public class MoviesCatalogActivity extends AppCompatActivity {
                 "After another international incident involving the Avengers, causing more collateral damage, increase political pressure to establish a system that requires more responsibility and to determine when to engage the services of group of superheroes. This new situation will divide Avengers while trying to protect the world from a new and terrible villain."));
         movies.add(new Movie("Big Game", Integer.toString(R.mipmap.ic_big_game_launcher),
                 "Air Force One is shot down by terrorists leaving the President of the United States stranded in the desert. There is only one person who can save him, a 13-year-old Oskari."));
-        movies.add(new Movie("Money Monster", Integer.toString(R.mipmap.ic_maestro_dinero_launcher),"Lee Gates (George Clooney), a famous TV presenter, is known for being one of the gurus of Wall Street. But when the young Kyle Budwell (Jack O'Connell) loses all the money from his family in a bad investment advice of Gates, he decides to kidnap the journalist during broadcast of the program."));
+        movies.add(new Movie("Money Monster", Integer.toString(R.mipmap.ic_maestro_dinero_launcher),
+                "Lee Gates (George Clooney), a famous TV presenter, is known for being one of the gurus of Wall Street. But when the young Kyle Budwell (Jack O'Connell) loses all the money from his family in a bad investment advice of Gates, he decides to kidnap the journalist during broadcast of the program."));
+
+
     }
+
+
 }
