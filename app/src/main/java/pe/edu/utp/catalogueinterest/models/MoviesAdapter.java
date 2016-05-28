@@ -18,7 +18,7 @@ import pe.edu.utp.catalogueinterest.activities.MovieDetailActivity;
 import java.util.ArrayList;
 
 /**
- * Created by Usuario on 27/05/2016.
+ * Created by rojasleón on 24/05/2016.
  */
 
 public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder> {
@@ -35,6 +35,48 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
         public ViewHolder(View itemView){
             super(itemView);
             movieCard = (CardView) itemView.findViewById(R.id.movie_card);
+            nameTextView = (TextView) itemView.findViewById(R.id.nameTextView);
+            pictureImageView = (ImageView) itemView.findViewById(R.id.pictureImageView);
         }
     }
+
+    @Override
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.movie_card, parent, false);
+        ViewHolder viewHolder = new ViewHolder(view);
+        return viewHolder;
+
+    }
+
+    @Override
+    public void onBindViewHolder(ViewHolder holder, final int position) {
+        holder.nameTextView.setText(movies.get(position).movieName);
+        holder.pictureImageView.setImageResource(
+                Integer.parseInt(movies.get(position).imageUrl));
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                System.out.printf("Selected position: %d%n", position);
+                Intent itemIntent = new Intent(view.getContext(), MovieDetailActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("firstName", movies.get(position).movieName);
+                bundle.putString("pictureUrl", movies.get(position).imageUrl);
+                bundle.putString("shortBio", movies.get(position).Synopsis);
+                itemIntent.putExtras(bundle);
+                view.getContext().startActivity(itemIntent);
+            }
+        });
+    }
+
+
+    @Override
+    public int getItemCount() {
+        return movies.size();
+    }
+
+    @Override
+    public void onAttachedToRecyclerView(RecyclerView recyclerView) {
+        super.onAttachedToRecyclerView(recyclerView);
+    }
+
 }
