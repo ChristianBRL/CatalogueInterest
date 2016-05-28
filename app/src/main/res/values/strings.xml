@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Catálogo de Intereses</string>
+    <string name="app_name">Catalog Interest</string>
 
     <string name="title_activity_splash_screen"></string>
     <string name="dummy_button">Dummy Button</string>

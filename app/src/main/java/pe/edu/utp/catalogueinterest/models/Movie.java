@@ -7,11 +7,11 @@ package pe.edu.utp.catalogueinterest.models;
 public class Movie {
     String movieName;
     String imageUrl;
-    String synopsis;
+    String Synopsis;
 
-    public Movie(String movieName, String imageUrl, String synopsis) {
+    public Movie(String movieName, String imageUrl, String Synopsis) {
         this.movieName = movieName;
         this.imageUrl = imageUrl;
-        this.synopsis = synopsis;
+        this.Synopsis = Synopsis;
     }
 }

@@ -61,7 +61,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
                 Bundle bundle = new Bundle();
                 bundle.putString("movieName", movies.get(position).movieName);
                 bundle.putString("imageUrl", movies.get(position).imageUrl);
-                bundle.putString("synopsis", movies.get(position).synopsis);
+                bundle.putString("Synopsis", movies.get(position).Synopsis);
                 itemIntent.putExtras(bundle);
                 view.getContext().startActivity(itemIntent);
             }

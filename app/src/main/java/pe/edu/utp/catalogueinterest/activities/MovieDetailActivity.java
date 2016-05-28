@@ -27,10 +27,10 @@ public class MovieDetailActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         nameTextView = (TextView) findViewById(R.id.nameTextView);
         pictureImageView = (ImageView) findViewById(R.id.pictureImageView);
-        nameTextView.setText(bundle.getString("firstName"));
+        nameTextView.setText(bundle.getString("movieName"));
         synopsisBioTextView = (TextView) findViewById(R.id.synopsisBioTextView);
-        synopsisBioTextView.setText(bundle.getString("synopsis"));
-        pictureImageView.setImageResource(Integer.parseInt(bundle.getString("pictureUrl")));
+        synopsisBioTextView.setText(bundle.getString("Synopsis"));
+        pictureImageView.setImageResource(Integer.parseInt(bundle.getString("imageUrl")));
         backButton = (Button) findViewById(R.id.backButton);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
