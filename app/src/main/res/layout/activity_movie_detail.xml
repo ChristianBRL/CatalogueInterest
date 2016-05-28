@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
-        android:id="@+id/internal_movie_detail_layout">
+        android:id="@+id/internal_item_layout">
 
         <ImageView
             android:layout_width="120dp"
@@ -28,7 +28,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="X-Men: Apocalypse"
+            android:text="Title"
             android:id="@+id/nameTextView"
             android:gravity="center_horizontal"
             android:layout_gravity="center_horizontal"
@@ -40,7 +40,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Text"
+            android:text="Synopsis"
             android:id="@+id/synopsisBioTextView"
             android:gravity="center_horizontal"
             android:layout_below="@+id/nameTextView"
